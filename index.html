@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Fonte do Google -->
+  <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
+  <title>Moriah Contabilidade</title>
+</head>
+
+<body>
+  <header>
+    <div class="header-container"> <!-- Container principal do cabeçalho -->
+      <div class="nome"> <!-- Div para o nome da empresa -->
+        <a href="#home" class="moriah">MORIAH</a> <!-- Nome da empresa como link -->
+        <div class="contabilidade">CONTABILIDADE E</div> <!-- Tipo de serviço -->
+        <div class="acessoria">ASSESSORIA EMPRESARIAL</div> <!-- Tipo de serviço -->
+      </div>
+      <nav>
+        <ul class="nav-links"> <!-- Lista de links de navegação -->
+          <li><a href="#serviços">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#sobre">Sobre</a></li> <!-- Link atualizado -->
+          <div>
+            <button id="abrirEmpresaBtn" class="button"
+              onclick="document.getElementById('form-popup').style.display='block'">Abrir Empresa</button>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="form-popup" class="form-popup" style="display:none;">
+    <form id="empresaForm" class="form-container" onsubmit="enviarWhatsApp(event)">
+      <h2>Iniciar Abertura de Empresa</h2>
+      <label for="nome"><b>Nome Completo</b></label>
+      <input type="text" id="nome" name="nome" class="form-field" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="email" id="email" name="email" class="form-field" required>
+
+      <label for="telefone"><b>Telefone</b></label>
+      <input type="tel" id="telefone" name="telefone" class="form-field" required>
+
+      <label for="tipo"><b>Tipo de Empresa</b></label>
+      <input type="text" id="tipo" name="tipo" class="form-field" required>
+
+      <label for="mensagem"><b>Mensagem (Opcional)</b></label>
+      <textarea id="mensagem" name="mensagem" class="form-field"></textarea>
+
+      <button type="submit" class="btn">Enviar</button>
+      <button type="button" class="btn cancel"
+        onclick="document.getElementById('form-popup').style.display='none'">Fechar</button>
+    </form>
+  </div>
+
+  <div class="image-container">
+    <img class="imagem-principal" src="/imgs/img2.png" alt="Imagem Principal">
+    <div class="imagem-overlay"></div> <!-- Sobreposição escura -->
+    <div class="texto-canto-esquerdo"> <!-- Texto no canto esquerdo -->
+      Ao seu lado da <span class="dourado">abertura do CNPJ</span><br>
+      até a <span class="dourado">gestão contábil</span> de sua empresa
+    </div>
+  </div>
+
+  <div id="serviços"> <!-- Seção de serviços -->
+    <section class="solucoes-section"> <!-- Nova seção para soluções -->
+      <h2 class="titulo-solucoes">Conheça as nossas soluções</h2>
+      <div class="servicos-container"> <!-- Container para os serviços -->
+        <div class="servico">Contabilidade empresarial de empresas do Simples Nacional</div>
+        <div class="servico">Abertura, alteração e baixa de empresa</div>
+        <div class="servico">Apuração de impostos na área fiscal</div>
+        <div class="servico">Escrituração contábil</div>
+        <div class="servico">Apuração de folha de pagamento</div>
+        <div class="servico">Assessoria a empresas MEI</div>
+        <div class="servico">Imposto de renda pessoas física</div>
+        <div class="servico">Declaração de ITR (Imposto Territorial Rural)</div>
+      </div>
+      <div>
+        <button class="button2">
+          <a href="https://web.whatsapp.com/send?phone=12988576850" target="_blank">Tire suas dúvidas!</a>
+        </button>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section id="sobre" class="sobrenos-section"> <!-- Adicionado o ID 'sobre' -->
+      <img class="logo-sobre" src="/imgs/logo1.jpg" alt="Logo da Empresa" class="logo-sobre">
+      <div class="titulo-sobre-nos">Sobre Nós:</div>
+      <div class="visao-missao-valores">
+        <h3>Missão</h3>
+        <p class="valor">Oferecer soluções contábeis eficazes, ajudando empresas a prosperar com segurança e
+          conformidade.</p>
+
+        <h3>Visão</h3>
+        <p class="valor">Ser referência no setor contábil, destacando-se pela excelência em serviços e pela satisfação
+          dos nossos clientes.</p>
+
+        <h3>Valores</h3>
+        <p class="valor">Ética, transparência, inovação, compromisso e excelência no atendimento ao cliente.</p>
+        <p class="valor2">
+          <br><br>A Moriah Contabilidade tem ajudado empresas de diversos setores a crescer com
+          segurança e eficiência. Com uma equipe altamente qualificada e atualizada com as mudanças legislativas,
+          estamos prontos para oferecer as melhores soluções para a sua empresa.
+        </p>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <div id="contato" class="final"> <!-- Seção de contato -->
+      <footer class="final">
+        <h3 class="titulo-footer">Informações de contato</h3>
+        <div class="redes-sociais">
+          <a href="https://instagram.com/contabilidade_moriah" target="_blank"><img src="/imgs/instagram03.png"
+              alt="Instagram"></a>
+          <a href="https://web.whatsapp.com/send?phone=12988576850" target="_blank"><img src="/imgs/whatsapp.png"
+              alt="WhatsApp"></a>
+          <a href="mailto:moriahcontabilidade.erika@gmail.com" target="_blank">
+            <img src="/imgs/social.png" alt="Email">
+          </a>
+        </div>
+        <div class="informacoes">
+          <p class="telefone">Telefone: (12) 98857-6850</p>
+          <p class="cnpj">CNPJ: 24.358.017/0001-83</p>
+        </div>
+        <div class="texto">© 2024 Moriah Contabilidade. Todos os direitos reservados.</div>
+        <div class="final">
+          <button onclick="scrollToTop()" class="scroll-top-button">Voltar ao topo</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script>
+    function enviarWhatsApp(event) {
+      event.preventDefault(); // Previne o comportamento padrão do formulário
+
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const telefone = document.getElementById('telefone').value;
+      const tipo = document.getElementById('tipo').value;
+      const mensagem = document.getElementById('mensagem').value;
+
+      const numero = "5512988576850"; // Número do WhatsApp
+      const texto = `Olá, meu nome é ${nome}. \nMeu e-mail é ${email}. \nMeu telefone é ${telefone}. \nTipo de empresa: ${tipo}. \nMensagem: ${mensagem}`;
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+      window.open(url); // Abre o WhatsApp com a mensagem pré-preenchida
+    }
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+
+</html>
